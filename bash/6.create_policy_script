@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "{" >> policy/policy.script
+echo "  \"type\": \"all\"," >> policy/policy.script
+echo "  \"scripts\":" >> policy/policy.script
+echo "  [" >> policy/policy.script
+echo "   {" >> policy/policy.script
+echo "     \"type\": \"before\"," >> policy/policy.script
+echo "     \"slot\": $(expr $(cardano-cli query tip --testnet-magic 1097911063 | jq .slot?) + 432000)" >> policy/policy.script
+echo "   }," >> policy/policy.script
+echo "   {" >> policy/policy.script
+echo "     \"type\": \"sig\"," >> policy/policy.script
+echo "     \"keyHash\": \"$(cardano-cli address key-hash --payment-verification-key-file policy/policy.vkey)\"" >> policy/policy.script
+echo "   }" >> policy/policy.script
+echo "  ]" >> policy/policy.script
+echo "}" >> policy/policy.script

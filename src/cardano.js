@@ -1,4 +1,4 @@
-const Cardano = require("cardanocli-js")
+const Cardano = require("../../cardanocli-js/index.js")
 
 const cardano = new Cardano({
     network: "testnet-magic 1097911063",

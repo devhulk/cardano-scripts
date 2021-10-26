@@ -1,0 +1,12 @@
+echo "{" >> metadata.json
+echo "  \"721\": {" >> metadata.json 
+echo "    \"$(cat policy/policyID)\": {" >> metadata.json 
+echo "      \"$(echo $tokenname)\": {" >> metadata.json
+echo "        \"description\": \"This is my first NFT thanks to the Cardano foundation\"," >> metadata.json
+echo "        \"name\": \"Cardano foundation NFT guide token\"," >> metadata.json
+echo "        \"id\": \"1\"," >> metadata.json
+echo "        \"image\": \"ipfs://$(echo $ipfs_hash)\"" >> metadata.json
+echo "      }" >> metadata.json
+echo "    }" >> metadata.json 
+echo "  }" >> metadata.json 
+echo "}" >> metadata.json

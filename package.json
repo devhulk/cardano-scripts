@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "cardanocli-js": "3.0.0",
+    "cardanocli-js": "4.0.1",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0"
   }

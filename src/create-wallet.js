@@ -13,4 +13,4 @@ const createWallet = name => {
     return cardano.wallet(name)
 }
 
-createWallet("PuglyEscrowTest")
+createWallet("PuglyEscrowTest2")

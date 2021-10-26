@@ -1,0 +1,5 @@
+#!/bin/bash
+
+source config.sh
+
+cardano-cli transaction submit --tx-file matx.signed $Network
