@@ -1,0 +1,7 @@
+#!/bin/bash
+
+source config.sh
+
+export fee=$(cardano-cli transaction calculate-min-fee --tx-body-file matx.raw --tx-in-count 1 --tx-out-count 1 --witness-count 2 $Network --protocol-params-file protocol.json | cut -d " " -f1)
+
+echo $fee

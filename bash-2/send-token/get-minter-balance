@@ -1,0 +1,5 @@
+#!/bin/bash
+
+source new_config.sh
+
+cardano-cli query utxo --address $mintaddr $Network --out-file minter.json

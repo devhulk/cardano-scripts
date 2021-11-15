@@ -1,0 +1,5 @@
+#!/bin/env bash
+
+source config.sh
+
+cardano-cli query utxo --address $address --testnet-magic 1097911063

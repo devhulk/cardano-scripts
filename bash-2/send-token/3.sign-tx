@@ -1,0 +1,9 @@
+#!/bin/bash
+
+source new_config.sh
+
+cardano-cli transaction sign  \
+--signing-key-file $walletPath/payment.skey  \
+$Network \
+--tx-body-file matx.raw  \
+--out-file matx.signed
